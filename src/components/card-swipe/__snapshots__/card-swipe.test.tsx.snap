@@ -56,19 +56,19 @@ exports[`CardSwipe > should render the component 1`] = `
                 >
                   <i
                     aria-label="Penalty level 1"
-                    class="bx bx-cocktail icon "
+                    class="bx bx-wine icon "
                   />
                   <i
                     aria-label="Penalty level 2"
-                    class="bx bx-cocktail icon "
+                    class="bx bx-wine icon "
                   />
                   <i
                     aria-label="Penalty level 3"
-                    class="bx bx-cocktail icon "
+                    class="bx bx-wine icon "
                   />
                   <i
                     aria-label="Penalty level 4"
-                    class="bx bx-cocktail icon "
+                    class="bx bx-wine icon "
                   />
                 </div>
               </div>

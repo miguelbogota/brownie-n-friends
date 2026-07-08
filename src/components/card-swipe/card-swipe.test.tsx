@@ -2,13 +2,14 @@ import { render, screen } from '@/testing';
 import { CardSwipe } from './card-swipe.component';
 
 vi.mock('../../data', () => ({
-  SHUFFLED_CARDS: [
+  CARDS: [
     {
       type: 'game',
       content: 'Todos escriben un número del 1 al 10. Quien coincida contigo toma.',
       penalty: 2,
     },
   ],
+  shuffleArray: (cards: any[], _min: number, _max: number) => cards,
 }));
 
 describe('CardSwipe', () => {

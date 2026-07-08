@@ -14,7 +14,6 @@ $card-types: (
   padding: var(--card-padding);
   border-radius: var(--space-2);
   border: 1px solid var(--scale-5);
-  min-width: 200px;
   max-width: var(--card-width);
   position: relative;
 
@@ -39,6 +38,8 @@ $card-types: (
     align-items: center;
     background-color: var(--scale-6);
     border-radius: var(--space-1);
+    width: 85vw;
+    max-width: 100%;
     padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
     min-height: var(--card-height);
 
@@ -73,7 +74,7 @@ $card-types: (
 
         & .icon {
           color: var(--scale-2);
-          font-size: var(--space-4);
+          font-size: calc(var(--space-5) * 0.8);
           transition: color 0.2s ease;
         }
       }

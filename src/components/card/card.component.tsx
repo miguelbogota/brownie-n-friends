@@ -40,7 +40,7 @@ export function Card({ type: barText, text: title, penaltyLevel }: CardProps) {
             {[1, 2, 3, 4].map((level) => (
               <i
                 key={level}
-                className={`bx bx-cocktail icon ${level <= clampedLevel ? 'active' : ''}`}
+                className={`bx bx-wine icon ${level <= clampedLevel ? 'active' : ''}`}
                 aria-label={`Penalty level ${level}`}
               ></i>
             ))}

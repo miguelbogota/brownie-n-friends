@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import './card-swipe.styles.scss';
 import { Card, type CardProps } from '../card/card.component';
-import { SHUFFLED_CARDS } from '../../data';
+import { CARDS, shuffleArray } from '../../data';
 import { useAppState } from '@/state';
 
 /** Card swipe component with tinder-like swipe functionality. */
@@ -11,16 +11,20 @@ export function CardSwipe() {
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
   const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
-  const currentCard = SHUFFLED_CARDS[currentIndex] as CardProps;
 
   const { currentPlayer, playerCount, nextPlayer, restartGame } = useAppState();
+  const cards = useMemo(
+    () => shuffleArray(CARDS, Math.floor(playerCount / 2.5), playerCount),
+    [playerCount],
+  );
+  const currentCard = cards[currentIndex] as CardProps;
 
   const cardRef = useRef<HTMLDivElement>(null);
   const startX = useRef(0);
   const startY = useRef(0);
 
   const handleSwipe = (direction: 'left' | 'right') => {
-    if (isAnimating || currentIndex >= SHUFFLED_CARDS.length - 1) return;
+    if (isAnimating || currentIndex >= cards.length - 1) return;
 
     setIsAnimating(true);
     setSwipeDirection(direction);
@@ -35,7 +39,7 @@ export function CardSwipe() {
   };
 
   const handleDragStart = (clientX: number, clientY: number) => {
-    if (isAnimating || currentIndex >= SHUFFLED_CARDS.length - 1) return;
+    if (isAnimating || currentIndex >= cards.length - 1) return;
     setIsDragging(true);
     startX.current = clientX;
     startY.current = clientY;
