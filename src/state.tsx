@@ -6,7 +6,9 @@ export type InitialState = Window['__STATE__'];
 /** Virtual state context type. */
 export type VirtualState = {
   /** Initialize the app. */
-  initializeApp: () => void;
+  initializeApp: () => Promise<void>;
+  /** Start the game with the specified number of players. */
+  startGame: (playerCount: number) => void;
 };
 
 /** State context interface. */
@@ -29,8 +31,14 @@ export function AppStateProvider({ children, value }: StateProviderProps) {
       value={{
         ...value,
         isAppInitialized,
-        initializeApp: () => {
+        initializeApp: async () => {
+          // TODO: Add actual initialization logic here
+          await new Promise((resolve) => setTimeout(resolve, 500));
           setIsAppInitialized(true);
+        },
+        startGame: (playerCount) => {
+          // TODO: Add actual game start logic here
+          console.log('Starting game with', playerCount, 'players');
         },
       }}
     >

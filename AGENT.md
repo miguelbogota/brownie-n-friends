@@ -105,6 +105,7 @@ margin: 16px;
 - Prefer:
   - SCSS scoped styles for components
   - Do not use BEM but rather semantic class names
+  - Nesting scss
 
 - Always:
   - Use variables from `_variables.scss`

@@ -1,8 +1,35 @@
 import { useEffect } from 'react';
-import { AppStateProvider, type InitialState } from './state';
+import { AppStateProvider, useAppState, type InitialState } from './state';
+import { GameStart } from './components/game-start';
+import { LoadingScreen } from './components/loading-screen';
+import { Card } from './components/card';
 
 /** Props for the Router component. */
 export type RouterProps = InitialState;
+
+/** Main application component that renders the game start screen. */
+function App() {
+  const { isAppInitialized, initializeApp } = useAppState();
+
+  useEffect(() => {
+    initializeApp();
+  }, []);
+
+  if (!isAppInitialized) {
+    return <LoadingScreen />;
+  }
+
+  return (
+    <>
+      <GameStart />
+      <Card
+        type="BUENA SUERTE"
+        text="De ahora en adelante todos toman siempre que alguien diga la palabra pene"
+        penaltyLevel={2}
+      />
+    </>
+  );
+}
 
 /** Root component for the application. */
 export function Root(props: RouterProps) {
@@ -29,7 +56,7 @@ export function Root(props: RouterProps) {
 
   return (
     <AppStateProvider value={props}>
-      <div>Home</div>
+      <App />
     </AppStateProvider>
   );
 }

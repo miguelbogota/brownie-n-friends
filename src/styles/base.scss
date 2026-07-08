@@ -2,4 +2,66 @@
 html {
   font-family: Barlow, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-primary);
+  background-color: var(--background-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--scale-7) 60%, var(--background-main)),
+    var(--background-main),
+    color-mix(in srgb, var(--red) 30%, var(--background-main)),
+    color-mix(in srgb, var(--red) 30%, var(--background-main)),
+    color-mix(in srgb, var(--blue) 15%, var(--background-main)),
+    color-mix(in srgb, var(--red) 30%, var(--background-main)),
+    color-mix(in srgb, var(--red) 30%, var(--background-main)),
+    var(--background-main),
+    color-mix(in srgb, var(--scale-7) 60%, var(--background-main))
+  );
+  background-size: 400% 400%;
+  animation: BackgroundGradient 20s ease infinite;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: -250%;
+    left: -250%;
+    width: 500%;
+    height: 500%;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(45deg);
+
+    --background-color: #e5e5f7;
+    background-color: var(--background-color);
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        var(--background-color) 0,
+        var(--background-color) 5px,
+        transparent 4px,
+        transparent 10px
+      ),
+      linear-gradient(to bottom, var(--background-contrast) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 10px;
+  }
+}
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

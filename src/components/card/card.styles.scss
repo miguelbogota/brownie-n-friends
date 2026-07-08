@@ -1,0 +1,93 @@
+$card-types: (
+  rule: var(--blue),
+  game: var(--green),
+  challenge: var(--yellow),
+  'bad-luck': var(--red),
+  'good-luck': var(--purple),
+);
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3);
+  border-radius: var(--space-2);
+  border: 1px solid var(--scale-5);
+  min-width: 200px;
+  max-width: 500px;
+  position: relative;
+
+  & .type {
+    padding: 0 var(--space-5) var(--space-2) var(--space-5);
+    border-radius: var(--space-1);
+    font-size: var(--space-2);
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    color: var(--text-primary);
+    position: absolute;
+    top: var(--space-2);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--scale-6);
+    border-radius: var(--space-1);
+    padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
+
+    & h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-align: center;
+      margin-bottom: var(--space-7);
+    }
+
+    & .penalty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      bottom: var(--space-5);
+      gap: var(--space-2);
+      width: 100%;
+
+      & h3 {
+        font-size: var(--space-2);
+        font-weight: 600;
+        color: var(--scale-3);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      & .icons {
+        display: flex;
+        gap: var(--space-1);
+
+        & .icon {
+          color: var(--scale-2);
+          font-size: var(--space-4);
+          transition: color 0.2s ease;
+        }
+      }
+    }
+  }
+
+  // Card type variants
+  @each $type, $color in $card-types {
+    &.#{$type} {
+      background-color: $color;
+
+      & .type {
+        background-color: $color;
+      }
+
+      & .content .penalty .icons .icon.active {
+        color: $color;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.game-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-4);
+  color: var(--text-primary);
+  max-width: 550px;
+  min-width: 250px;
+  width: 50vw;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    max-width: 400px;
+    user-select: none;
+
+    & h1 {
+      margin: 0;
+      font-family: 'Yuyu', sans-serif;
+      font-size: clamp(4rem, 6vw, 7rem);
+      text-wrap: nowrap;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      word-spacing: -0.1em;
+      line-height: 0.8;
+    }
+
+    & img {
+      width: clamp(100px, 30vw, 8rem);
+    }
+  }
+
+  & .player-section {
+    padding: var(--space-3) var(--space-2);
+    border-radius: var(--space-2);
+    border: 1px solid var(--text-primary);
+    margin-bottom: var(--space-4);
+    width: 100%;
+    backdrop-filter: blur(2px);
+
+    & .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-4);
+
+      & h2 {
+        font-size: var(--space-3);
+        font-weight: 700;
+        margin: 0;
+      }
+
+      & i {
+        font-size: var(--space-4);
+      }
+    }
+
+    & .player-controls {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+      padding: var(--space-1) var(--space-3);
+      background-color: var(--text-primary);
+      border-radius: var(--space-4);
+
+      & .player-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: var(--space-5);
+        font-weight: 700;
+        color: var(--text-inverted);
+      }
+    }
+
+    & .control-button {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--text-inverted);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--primary) 80%, #00000069);
+        transform: scale(1.05);
+      }
+
+      &:active:not(:disabled) {
+        transform: scale(0.95);
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+
+    & .player-limit {
+      text-align: center;
+      font-size: var(--space-2);
+      font-weight: 500;
+      color: var(--scale-2);
+    }
+  }
+
+  & .start-button {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--text-inverted);
+    padding: var(--space-3);
+    width: 80%;
+    font-size: var(--space-3);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--space-2);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

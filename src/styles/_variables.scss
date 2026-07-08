@@ -13,15 +13,21 @@
   --scale-7: #212121;
 
   // Semantic colors
-  --primary: #daa520;
-  --secondary: #455a64;
-  --info: #1976d2;
-  --success: #388e3c;
-  --error: #d32f2f;
+  --primary: #ffb6c1;
+  --secondary: #e9b3fb;
+  --blue: #1976d2;
+  --green: #388e3c;
+  --red: #ff2e63;
+  --yellow: #f5c857;
+  --purple: #792ca2;
 
   // Text colors
   --text-primary: var(--scale-1);
   --text-inverted: var(--scale-7);
+
+  // Background colors
+  --background-main: #4d2b8c;
+  --background-contrast: #d67777;
 
   // Spacing
   --space-0: 0rem;
