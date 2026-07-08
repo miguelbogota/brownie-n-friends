@@ -1,11 +1,8 @@
 import { useEffect } from 'react';
-import { AppStateProvider, useAppState, type InitialState } from './state';
+import { AppStateProvider, useAppState } from './state';
 import { GameStart } from './components/game-start';
 import { LoadingScreen } from './components/loading-screen';
 import { CardSwipe } from './components/card-swipe';
-
-/** Props for the Router component. */
-export type RouterProps = InitialState;
 
 /** Main application component that renders the game start screen. */
 function App() {
@@ -27,9 +24,7 @@ function App() {
 }
 
 /** Root component for the application. */
-export function Root(props: RouterProps) {
-  const {} = props;
-
+export function Root() {
   /**
    * Fixes the issue where the buttons are not clickable on mobile devices by adding a
    * touchstart listener that triggers a click event.
@@ -50,7 +45,7 @@ export function Root(props: RouterProps) {
   }, []);
 
   return (
-    <AppStateProvider value={props}>
+    <AppStateProvider>
       <App />
     </AppStateProvider>
   );

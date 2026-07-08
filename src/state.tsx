@@ -1,11 +1,10 @@
 import { createContext, useContext, useState, type PropsWithChildren } from 'react';
 import { gameSave } from './actions/game-save';
 
-/** Initial state type. */
-export type InitialState = Window['__STATE__'];
-
 /** Virtual state context type. */
 export type VirtualState = {
+  /** Whether the app has been initialized. */
+  isAppInitialized: boolean;
   /** Initialize the app. */
   initializeApp: () => Promise<void>;
   /** Restart the game. */
@@ -23,19 +22,17 @@ export type VirtualState = {
 };
 
 /** State context interface. */
-export type StateContext = InitialState & VirtualState;
+export type StateContext = VirtualState;
 
 /** Context for sharing state between server and client. */
 const Context = createContext<StateContext | null>(null);
 
 /** Props for the StateProvider component. */
-export type StateProviderProps = PropsWithChildren<{
-  value: InitialState;
-}>;
+export type StateProviderProps = PropsWithChildren;
 
 /** Provider for sharing state between server and client. */
-export function AppStateProvider({ children, value }: StateProviderProps) {
-  const [isAppInitialized, setIsAppInitialized] = useState(value.isAppInitialized);
+export function AppStateProvider({ children }: StateProviderProps) {
+  const [isAppInitialized, setIsAppInitialized] = useState(false);
   const [currentView, setCurrentView] = useState<'game-start' | 'card-swipe'>('game-start');
   const [playerCount, setPlayerCount] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(1);
@@ -43,7 +40,6 @@ export function AppStateProvider({ children, value }: StateProviderProps) {
   return (
     <Context
       value={{
-        ...value,
         isAppInitialized,
         currentView,
         playerCount,
