@@ -6,10 +6,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  max-height: 90vh;
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
+  overscroll-behavior: none;
 
   background: linear-gradient(
     135deg,
@@ -24,7 +24,7 @@ html {
     color-mix(in srgb, var(--scale-7) 60%, var(--background-main))
   );
   background-size: 400% 400%;
-  animation: BackgroundGradient 20s ease infinite;
+  animation: BackgroundGradient 15s ease infinite;
 
   &::before {
     content: '';
@@ -54,12 +54,16 @@ html {
   }
 }
 
+body {
+  max-height: 90vh;
+}
+
 @keyframes BackgroundGradient {
   0% {
     background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 90% 90%;
   }
   100% {
     background-position: 0% 0%;

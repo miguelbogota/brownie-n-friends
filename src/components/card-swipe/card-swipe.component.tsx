@@ -52,7 +52,7 @@ export function CardSwipe() {
     if (!isDragging) return;
     setIsDragging(false);
 
-    const threshold = 300;
+    const threshold = 150;
     if (dragPosition.x > threshold) {
       handleSwipe('right');
     } else if (dragPosition.x < -threshold) {
