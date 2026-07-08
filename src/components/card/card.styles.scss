@@ -4,17 +4,18 @@ $card-types: (
   challenge: var(--yellow),
   'bad-luck': var(--red),
   'good-luck': var(--purple),
+  'secret-mission': var(--dark-blue),
 );
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--space-3);
+  padding: var(--card-padding);
   border-radius: var(--space-2);
   border: 1px solid var(--scale-5);
   min-width: 200px;
-  max-width: 500px;
+  max-width: var(--card-width);
   position: relative;
 
   & .type {
@@ -28,6 +29,8 @@ $card-types: (
     top: var(--space-2);
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+    text-wrap: nowrap;
   }
 
   & .content {
@@ -37,6 +40,7 @@ $card-types: (
     background-color: var(--scale-6);
     border-radius: var(--space-1);
     padding: var(--space-5) var(--space-5) var(--space-7) var(--space-5);
+    min-height: var(--card-height);
 
     & h2 {
       font-size: 1.5rem;

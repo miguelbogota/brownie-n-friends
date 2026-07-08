@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CardSwipe > should render the component 1`] = `
+<body>
+  <div>
+    <div
+      class="card-swipe"
+    >
+      <div
+        class="player-display"
+      >
+        <span
+          class="player-label"
+        >
+          JUGADOR
+        </span>
+        <span
+          class="player-number"
+        >
+          1
+           / 
+          0
+        </span>
+      </div>
+      <div
+        class="card-stack"
+      >
+        <div
+          class="swipe-hint"
+          style="background-color: transparent; opacity: 0;"
+        />
+        <article
+          class="card-container  "
+          style="transform: translate(0, 0); opacity: 1;"
+        >
+          <div
+            class="card"
+          >
+            <span
+              class="type"
+            >
+              game
+            </span>
+            <div
+              class="content"
+            >
+              <h2 />
+              <div
+                class="penalty"
+              >
+                <h3>
+                  PENALIZACIÓN
+                </h3>
+                <div
+                  class="icons"
+                >
+                  <i
+                    aria-label="Penalty level 1"
+                    class="bx bx-cocktail icon "
+                  />
+                  <i
+                    aria-label="Penalty level 2"
+                    class="bx bx-cocktail icon "
+                  />
+                  <i
+                    aria-label="Penalty level 3"
+                    class="bx bx-cocktail icon "
+                  />
+                  <i
+                    aria-label="Penalty level 4"
+                    class="bx bx-cocktail icon "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <button
+        class="restart-button"
+      >
+        Restart
+      </button>
+    </div>
+  </div>
+</body>
+`;

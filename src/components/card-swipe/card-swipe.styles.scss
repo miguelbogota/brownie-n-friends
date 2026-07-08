@@ -1,0 +1,110 @@
+.card-swipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  width: 100vw;
+  gap: var(--space-4);
+  overflow: hidden;
+  padding: var(--space-2);
+
+  .player-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    z-index: 3;
+
+    .player-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--scale-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .player-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+  }
+
+  .card-stack {
+    position: relative;
+    width: 100%;
+    min-height: calc(var(--card-height) + var(--card-padding) + var(--space-3));
+    max-width: var(--card-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.95);
+      opacity: 0.5;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .swipe-hint {
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 200vw;
+      height: 200vh;
+      border-radius: var(--space-2);
+      z-index: 1;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .card-container {
+      position: absolute;
+      min-height: calc(var(--card-height) + var(--card-padding));
+      max-width: var(--card-width);
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+      cursor: grab;
+      user-select: none;
+      z-index: 2;
+
+      &.dragging {
+        cursor: grabbing;
+        transition: none;
+      }
+
+      &.swiping-left {
+        transform: translateX(-150%) rotate(-30deg);
+        opacity: 0;
+      }
+
+      &.swiping-right {
+        transform: translateX(150%) rotate(30deg);
+        opacity: 0;
+      }
+    }
+  }
+
+  .restart-button {
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--red);
+    color: white;
+    border: none;
+    border-radius: var(--space-1);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 3;
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+  }
+}

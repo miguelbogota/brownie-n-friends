@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 import { AppStateProvider, useAppState, type InitialState } from './state';
 import { GameStart } from './components/game-start';
 import { LoadingScreen } from './components/loading-screen';
-import { Card } from './components/card';
+import { CardSwipe } from './components/card-swipe';
 
 /** Props for the Router component. */
 export type RouterProps = InitialState;
 
 /** Main application component that renders the game start screen. */
 function App() {
-  const { isAppInitialized, initializeApp } = useAppState();
+  const { isAppInitialized, initializeApp, currentView } = useAppState();
 
   useEffect(() => {
     initializeApp();
@@ -19,16 +19,11 @@ function App() {
     return <LoadingScreen />;
   }
 
-  return (
-    <>
-      <GameStart />
-      <Card
-        type="BUENA SUERTE"
-        text="De ahora en adelante todos toman siempre que alguien diga la palabra pene"
-        penaltyLevel={2}
-      />
-    </>
-  );
+  if (currentView === 'card-swipe') {
+    return <CardSwipe />;
+  }
+
+  return <GameStart />;
 }
 
 /** Root component for the application. */

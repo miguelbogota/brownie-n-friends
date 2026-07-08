@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, type PropsWithChildren } from 'react';
+import { gameSave } from './actions/game-save';
 
 /** Initial state type. */
 export type InitialState = Window['__STATE__'];
@@ -7,8 +8,18 @@ export type InitialState = Window['__STATE__'];
 export type VirtualState = {
   /** Initialize the app. */
   initializeApp: () => Promise<void>;
+  /** Restart the game. */
+  restartGame: () => void;
   /** Start the game with the specified number of players. */
   startGame: (playerCount: number) => void;
+  /** Current view of the application. */
+  currentView: 'game-start' | 'card-swipe';
+  /** Total number of players in the game. */
+  playerCount: number;
+  /** Current player number (1-indexed). */
+  currentPlayer: number;
+  /** Move to the next player. */
+  nextPlayer: () => void;
 };
 
 /** State context interface. */
@@ -25,20 +36,54 @@ export type StateProviderProps = PropsWithChildren<{
 /** Provider for sharing state between server and client. */
 export function AppStateProvider({ children, value }: StateProviderProps) {
   const [isAppInitialized, setIsAppInitialized] = useState(value.isAppInitialized);
+  const [currentView, setCurrentView] = useState<'game-start' | 'card-swipe'>('game-start');
+  const [playerCount, setPlayerCount] = useState(0);
+  const [currentPlayer, setCurrentPlayer] = useState(1);
 
   return (
     <Context
       value={{
         ...value,
         isAppInitialized,
+        currentView,
+        playerCount,
+        currentPlayer,
         initializeApp: async () => {
-          // TODO: Add actual initialization logic here
+          const savedGame = gameSave.load();
+          if (savedGame) {
+            setPlayerCount(savedGame.players);
+            setCurrentPlayer(savedGame.currentPlayer);
+            setCurrentView('card-swipe');
+          }
+
           await new Promise((resolve) => setTimeout(resolve, 500));
           setIsAppInitialized(true);
         },
-        startGame: (playerCount) => {
-          // TODO: Add actual game start logic here
-          console.log('Starting game with', playerCount, 'players');
+        startGame: (count) => {
+          setPlayerCount(count);
+          setCurrentPlayer(1);
+          setCurrentView('card-swipe');
+          gameSave.save({
+            currentPlayer: 1,
+            players: count,
+          });
+        },
+        nextPlayer: () => {
+          setCurrentPlayer((prev) => {
+            const nextPlayer = (prev % playerCount) + 1;
+
+            gameSave.update(() => ({
+              currentPlayer: nextPlayer,
+            }));
+
+            return nextPlayer;
+          });
+        },
+        restartGame: () => {
+          setPlayerCount(0);
+          setCurrentPlayer(1);
+          setCurrentView('game-start');
+          gameSave.save(null);
         },
       }}
     >

@@ -1,0 +1,62 @@
+import type { CardProps } from '@/components/card';
+
+export const BAD_LUCK: CardProps[] = [
+  {
+    type: 'MALA SUERTE',
+    text: 'Debes sostener un vaso vacío en la mano hasta el final.',
+    penaltyLevel: 2,
+  },
+  { type: 'MALA SUERTE', text: 'Tu siguiente shot vale doble.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes sentarte hasta tu próximo turno.', penaltyLevel: 2 },
+  {
+    type: 'MALA SUERTE',
+    text: 'Cada vez que alguien diga tu nombre tomas medio shot.',
+    penaltyLevel: 3,
+  },
+  { type: 'MALA SUERTE', text: 'No puedes usar el celular hasta el final.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'Solo puedes hablar si levantas la mano.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'Debes mantener una cuchara en la mano.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes pronunciar la letra A.', penaltyLevel: 4 },
+  { type: 'MALA SUERTE', text: 'Cada vez que alguien brinde tú tomas también.', penaltyLevel: 3 },
+  { type: 'MALA SUERTE', text: 'No puedes decir más de dos palabras seguidas.', penaltyLevel: 3 },
+  { type: 'MALA SUERTE', text: 'Debes hablar como robot.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes reírte.', penaltyLevel: 3 },
+  { type: 'MALA SUERTE', text: 'Pierdes tu próximo turno.', penaltyLevel: 2 },
+  {
+    type: 'MALA SUERTE',
+    text: 'Todos pueden darte órdenes sencillas hasta tu siguiente turno.',
+    penaltyLevel: 3,
+  },
+  {
+    type: 'MALA SUERTE',
+    text: 'Cada vez que alguien tome, tú también tomas medio shot.',
+    penaltyLevel: 4,
+  },
+  { type: 'MALA SUERTE', text: 'Debes caminar en cámara lenta.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes usar nombres propios.', penaltyLevel: 3 },
+  {
+    type: 'MALA SUERTE',
+    text: 'Cada vez que alguien te haga una pregunta debes responder cantando.',
+    penaltyLevel: 3,
+  },
+  { type: 'MALA SUERTE', text: 'No puedes apoyar la espalda en la silla.', penaltyLevel: 1 },
+  { type: 'MALA SUERTE', text: 'Solo puedes usar una mano.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes mirar tu bebida.', penaltyLevel: 1 },
+  { type: 'MALA SUERTE', text: 'Debes pedir permiso para hablar.', penaltyLevel: 3 },
+  {
+    type: 'MALA SUERTE',
+    text: 'No puedes decir ninguna palabra de más de cinco letras.',
+    penaltyLevel: 4,
+  },
+  {
+    type: 'MALA SUERTE',
+    text: 'Cada vez que alguien se ría debes hacer una flexión.',
+    penaltyLevel: 3,
+  },
+  { type: 'MALA SUERTE', text: 'Habla con voz aguda.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'No puedes levantarte de la silla.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'Debes mantener los brazos cruzados.', penaltyLevel: 2 },
+  { type: 'MALA SUERTE', text: 'Cada error cuesta medio shot.', penaltyLevel: 4 },
+  { type: 'MALA SUERTE', text: 'No puedes usar emojis si escribes un mensaje.', penaltyLevel: 1 },
+  { type: 'MALA SUERTE', text: 'Todos pueden interrumpirte cuando hables.', penaltyLevel: 2 },
+];

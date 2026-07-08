@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 /** Props for the Card component. */
 export interface CardProps {
   /** Text to display in the bar at the top. */
-  type: 'REGLA' | 'JUEGO' | 'DESAFÍO' | 'MALA SUERTE' | 'BUENA SUERTE';
+  type: 'REGLA' | 'JUEGO' | 'DESAFÍO' | 'MALA SUERTE' | 'BUENA SUERTE' | 'MISIÓN SECRETA';
   /** Title text to display in the center. */
   text: string;
   /** Penalty level (1-4) to determine number of active icons. */
@@ -18,6 +18,7 @@ const CARD_TYPE_MAP = {
   DESAFÍO: 'challenge',
   'MALA SUERTE': 'bad-luck',
   'BUENA SUERTE': 'good-luck',
+  'MISIÓN SECRETA': 'secret-mission',
 } as const;
 
 /** Card component with bar, title, and penalty level indicators. */

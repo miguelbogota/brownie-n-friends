@@ -20,6 +20,7 @@
   --red: #ff2e63;
   --yellow: #f5c857;
   --purple: #792ca2;
+  --dark-blue: #2c3e50;
 
   // Text colors
   --text-primary: var(--scale-1);
@@ -28,6 +29,11 @@
   // Background colors
   --background-main: #4d2b8c;
   --background-contrast: #d67777;
+
+  // Cards
+  --card-height: 60vh;
+  --card-width: 700px;
+  --card-padding: var(--space-3);
 
   // Spacing
   --space-0: 0rem;

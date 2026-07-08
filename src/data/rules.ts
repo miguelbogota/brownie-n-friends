@@ -1,0 +1,58 @@
+import type { CardProps } from '@/components/card';
+
+export const RULES: CardProps[] = [
+  { type: 'REGLA', text: 'Desde ahora nadie puede decir "sí" ni "no".', penaltyLevel: 2 },
+  {
+    type: 'REGLA',
+    text: 'Cada vez que alguien diga tu nombre debes levantar ambos brazos.',
+    penaltyLevel: 2,
+  },
+  { type: 'REGLA', text: 'Todos deben brindar antes de tomar cualquier shot.', penaltyLevel: 1 },
+  { type: 'REGLA', text: 'No puedes señalar con el dedo.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Habla únicamente en preguntas hasta tu próximo turno.', penaltyLevel: 3 },
+  {
+    type: 'REGLA',
+    text: 'Cada vez que alguien se ría, tú también debes reír exageradamente.',
+    penaltyLevel: 1,
+  },
+  { type: 'REGLA', text: 'Nadie puede apoyar los codos en la mesa.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Antes de hablar debes decir "Su señoría...".', penaltyLevel: 2 },
+  {
+    type: 'REGLA',
+    text: 'Cada vez que alguien diga una grosería toma un shot extra.',
+    penaltyLevel: 2,
+  },
+  { type: 'REGLA', text: 'No puedes usar tu mano dominante.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Debes terminar cada frase con "mi rey".', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Cada vez que alguien saque el celular todos brindan.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'No puedes decir más de tres palabras seguidas.', penaltyLevel: 3 },
+  { type: 'REGLA', text: 'Cada vez que escuches una risa debes aplaudir.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Todos deben hablar con voz de locutor.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Cada vez que alguien diga "yo", toma un shot.', penaltyLevel: 3 },
+  { type: 'REGLA', text: 'Solo puedes responder con sonidos.', penaltyLevel: 3 },
+  { type: 'REGLA', text: 'No puedes mirar directamente a quien te habla.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Cada vez que alguien tome, debes decir "salud".', penaltyLevel: 1 },
+  { type: 'REGLA', text: 'Habla como si estuvieras susurrando.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Debes caminar hacia atrás cuando te levantes.', penaltyLevel: 2 },
+  {
+    type: 'REGLA',
+    text: 'Todos deben llamarte por un apodo elegido por el grupo.',
+    penaltyLevel: 2,
+  },
+  { type: 'REGLA', text: 'No puedes cruzar las piernas.', penaltyLevel: 1 },
+  { type: 'REGLA', text: 'Cada vez que alguien diga "shot", toma medio shot.', penaltyLevel: 3 },
+  { type: 'REGLA', text: 'Antes de beber debes hacer un brindis creativo.', penaltyLevel: 2 },
+  { type: 'REGLA', text: 'Solo puedes hablar cantando.', penaltyLevel: 3 },
+  {
+    type: 'REGLA',
+    text: 'Cada vez que alguien entre al lugar debes saludarlo de pie.',
+    penaltyLevel: 1,
+  },
+  { type: 'REGLA', text: 'No puedes reírte mostrando los dientes.', penaltyLevel: 2 },
+  {
+    type: 'REGLA',
+    text: 'Cada vez que alguien diga un número impar toma un shot.',
+    penaltyLevel: 3,
+  },
+  { type: 'REGLA', text: 'No puedes usar pronombres personales.', penaltyLevel: 4 },
+];

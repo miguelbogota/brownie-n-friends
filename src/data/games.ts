@@ -1,0 +1,343 @@
+import type { CardProps } from '@/components/card';
+
+export const GAMES: CardProps[] = [
+  {
+    type: 'JUEGO',
+    text: 'Piedra, papel o tijera con el jugador de tu izquierda. El perdedor toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos señalen al que creen que llegará más borracho. El más votado toma.',
+    penaltyLevel: 1,
+  },
+  { type: 'JUEGO', text: 'Pulso con el jugador que elijas.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'El último en tocar el piso toma.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos cierren los ojos. Elige a alguien para que tome.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Adivina quién escribió tu último mensaje de WhatsApp. Si fallas, toma.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una batalla de miradas con alguien.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos hacen piedra, papel o tijera. Los perdedores toman.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Compite haciendo el mejor ruido de animal.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'El grupo vota quién hizo la peor imitación. Esa persona toma.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Di el alfabeto al revés lo más lejos que puedas.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Nombra 10 ciudades en menos de 10 segundos.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Haz una competencia de parpadeo.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos intenten mantener una cara seria durante 30 segundos.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una estatua. El primero que se mueva pierde.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben un número del 1 al 10. Quien coincida contigo toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Nombra películas hasta que alguien no pueda continuar.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una carrera caminando como pingüino.', penaltyLevel: 1 },
+  { type: 'JUEGO', text: 'Compite haciendo el mejor moonwalk.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Todos dicen una palabra. El que tarde más de 3 segundos pierde.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una batalla de chistes.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Elige un rival. Gana quien aguante más sin reír.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Todos deben imitar al jugador de la derecha.', penaltyLevel: 1 },
+  { type: 'JUEGO', text: 'Haz mímica de una película.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben decir un país diferente. El primero que repita pierde.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una competencia de trabalenguas.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Elige una categoría. Todos responden por turnos.', penaltyLevel: 2 },
+  { type: 'JUEGO', text: 'Haz una pose. Todos la copian. El peor toma.', penaltyLevel: 1 },
+  { type: 'JUEGO', text: 'Compite haciendo la mejor risa falsa.', penaltyLevel: 1 },
+  { type: 'JUEGO', text: 'Todos deben decir un color. El que repita toma.', penaltyLevel: 1 },
+
+  {
+    type: 'JUEGO',
+    text: 'Todos apuntan a quien creen que ronca más. El más votado toma.',
+    penaltyLevel: 1,
+  },
+  { type: 'JUEGO', text: 'El primero en decir una palabra repetida pierde.', penaltyLevel: 1 },
+  { type: 'JUEGO', text: 'Todos deben hacer una pose. El grupo vota la peor.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Digan animales por turnos. El primero que repita pierde.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Todos deben escribir un número. El mayor toma.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Elige una categoría. El primero que dude más de 3 segundos pierde.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos intentan tocarse la nariz con la lengua. Quien no lo logre toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Compite con alguien haciendo la mejor imitación de Shrek.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos hacen una cara rara. El grupo decide quién pierde.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Haz piedra, papel o tijera en torneo hasta que quede un campeón.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos dicen una marca de carros. El primero que repita toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Cada jugador dice una palabra para crear una historia. Quien la arruine toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben imitar al jugador de la izquierda al mismo tiempo.',
+    penaltyLevel: 1,
+  },
+  { type: 'JUEGO', text: 'Compitan viendo quién hace el sonido más raro.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben un color. Si alguien coincide contigo, ambos toman.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige un rival. Gana quien dure más con un brazo levantado.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Todos dicen un Pokémon. El primero que repita pierde.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Todos hacen un dibujo en 20 segundos. El peor dibujo toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Compite con alguien diciendo trabalenguas cada vez más rápido.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben inventar un insulto elegante. El peor toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige una letra. Todos deben decir palabras que empiecen por ella.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben lanzar un objeto suave a un vaso. Quien falle toma.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Haz una competencia de baile de Fortnite.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben decir un streamer distinto. El primero que repita pierde.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'El grupo elige un tema. Improvisa un discurso de 30 segundos.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben quién creen que es el más competitivo. El más votado toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige a alguien. Ambos deben quedarse mirando al techo durante 30 segundos. El primero que baje la cabeza pierde.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben hacer el mismo sonido al mismo tiempo. El más lento toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos cuentan hasta 20, pero nadie puede hablar dos veces seguidas. Si alguien rompe la secuencia, toma.',
+    penaltyLevel: 3,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos intentan adivinar cuántas monedas hay en la billetera del jugador de la izquierda. El más alejado toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos señalen a la persona con la que saldrían en una cita. El más votado reparte 2 shots.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién da los mejores abrazos. El menos votado toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Haz una competencia de miradas con alguien. El primero que ría pierde.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos señalan al jugador más probable que se enamore primero. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Compitan haciendo el mejor piropo improvisado.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben quién creen que besa mejor. El más votado reparte un shot.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'El grupo elige dos jugadores para recrear una foto romántica.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben abrazar a alguien. El último en hacerlo toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige a alguien. Jueguen piedra, papel o tijera. El perdedor debe cargar al ganador durante 10 segundos.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Todos hacen una pose sexy. El grupo vota la peor.', penaltyLevel: 2 },
+  {
+    type: 'JUEGO',
+    text: 'Compite con alguien bailando reggaetón durante 20 segundos.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben quién sería el peor ex. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'El grupo decide quién tiene la mejor sonrisa. El ganador salva a alguien de tomar.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién respondería un "te extraño" a las 3 a.m. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  { type: 'JUEGO', text: 'Compitan haciendo la mejor cara de coqueteo.', penaltyLevel: 1 },
+  {
+    type: 'JUEGO',
+    text: 'Todos deben decir un cumplido al jugador de la derecha. El peor cumplido toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige una pareja. Deben bailar sin música durante 30 segundos.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién tiene más posibilidades de casarse primero.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos señalan al jugador más celoso. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Haz una competencia de poses para Tinder. El grupo elige la peor.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién sería el peor roommate. El más votado toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Compite con alguien haciendo la mejor caminata de modelo.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos escriben quién sería el primero en ir preso. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Elige a alguien. Deben mantener las frentes juntas durante 20 segundos.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién tiene el mejor outfit. El ganador elige quién toma.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién da más miedo borracho. El más votado toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Compitan haciendo el mejor baile prohibido. El grupo decide quién gana.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién sería el protagonista de un reality show. El ganador salva a alguien.',
+    penaltyLevel: 1,
+  },
+  {
+    type: 'JUEGO',
+    text: 'El grupo elige dos personas para un concurso de baile lento. El perdedor toma.',
+    penaltyLevel: 2,
+  },
+  {
+    type: 'JUEGO',
+    text: 'Todos votan quién tiene más labia. El ganador obliga a alguien a tomar.',
+    penaltyLevel: 2,
+  },
+];
