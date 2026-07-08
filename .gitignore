@@ -1,0 +1,19 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# misc
+.DS_Store
+
+# dependencies
+node_modules
+
+# framework
+dist
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
